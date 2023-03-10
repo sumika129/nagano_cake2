@@ -1,1 +1,29 @@
 <h3>商品新規登録</h3>
+<%= form_with madel: [:admin,@item] do |f| %>
+<table>
+  <tr>
+    <th>商品画像</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>商品名</th>
+    <td><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+    <th>商品説明</th>
+    <td><%= f.text_area :introduction %></td>
+  </tr>
+  <tr>
+    <th>ジャンル</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>税抜価格</th>
+    <td><%= f.text_field :price %>円</td>
+  </tr>
+  <tr>
+    <th>販売ステータス</th>
+    <td></td>
+  </tr>
+</table>
+<% end %>
