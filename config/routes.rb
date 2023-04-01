@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   namespace :public do
     get 'home/about'=>'homes#about',as:'about'
     resources :customers, only: [:show, :edit, :update]
+    get '/customers/:id/unsubscribe' => 'customers#unsubscribe', as: 'unsubscribe'
+    patch '/customers/:id/withdraw' => 'customers#withdraw', as: 'withdraw'
   end  
 
 
