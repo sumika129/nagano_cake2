@@ -4,7 +4,12 @@ class Public::AddressesController < ApplicationController
   end
   
   def create
-    
+    @address = Address.new(address_params)
+    if @address.save
+      redirect_to public_addresses_path
+    else
+      render:index
+    end  
   end
 
   def edit
@@ -15,4 +20,10 @@ class Public::AddressesController < ApplicationController
   
   def destroy
   end
+  
+  private
+  
+  def address_params
+    params.require(:address).permit(:name, :postal_code, :address)
+  end  
 end
