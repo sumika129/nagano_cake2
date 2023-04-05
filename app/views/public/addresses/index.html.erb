@@ -35,7 +35,7 @@
       <td><%= address.name %></td>
       <td>
         <%= link_to "編集する", edit_public_address_path(address) %>
-        <%#= link_to "削除する", %>
+        <%= link_to "削除する", public_address_path(address), method: :delete, "data-confirm" => "本当に消しますか?" %>
       </td>
     </tr>
   </tbody>
