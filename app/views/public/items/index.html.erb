@@ -3,7 +3,7 @@
 <table>
   <% @items.each do |item| %>
   <tr>
-    <td><%= item.get_image(100,100) %></td>
+    <td><%= image_tag item.get_image(100,100) %></td>
   </tr>
   <tr>
     <td><%= link_to public_item_path(item) do %><%= item.name %><% end %></td>
