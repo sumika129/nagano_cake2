@@ -6,7 +6,8 @@
     <td>
       <%= @item.name %><br>
       <%= @item.introduction %><br>
-      ¥<%= @item.price %>(税込)
+      ¥<%= @item.price %>(税込)<br>
+      <%= f.select :amount, *[1..3] %>
     </td>
   </tr>
 </table>
