@@ -1,13 +1,13 @@
 class Public::CartItemsController < ApplicationController
   def index
-    
+
   end
-  
+
   def update
-    
-  end  
-  
+
+  end
+
   def create
-    
-  end  
+
+  end
 end
