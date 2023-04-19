@@ -33,6 +33,7 @@ Rails.application.routes.draw do
     end
     resources :cart_items, only: [:index, :update, :create, :destroy]
     resources :orders, only: [:new, :index, :show]
+    post 'orders/comfirm'
   end
 
 

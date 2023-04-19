@@ -4,6 +4,10 @@ class Public::OrdersController < ApplicationController
     @address = current_customer.address
   end
 
+  def comfirm
+
+  end
+
   def index
   end
 
