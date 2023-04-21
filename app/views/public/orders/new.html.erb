@@ -13,7 +13,11 @@
   </tr>
   <tr>
     <th>お届け先</th>
-    <td></td>
+    <td>
+      <%= f.radio_button :select_address, "a" %>
+      <%= f.label :select_address, "ご自身の住所" %>
+      <%= current_customer.address_display %>
+    </td>
   </tr>
   <% end %>
 </table>
