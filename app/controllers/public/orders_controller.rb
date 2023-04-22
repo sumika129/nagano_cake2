@@ -5,6 +5,9 @@ class Public::OrdersController < ApplicationController
   end
 
   def comfirm
+   @cart_items = CartItem.all
+    @total = 0
+    @postage = 800
     @order = Order.new(order_params)
     @address = Address.find(params[:order][:address_id])
     if params[:order][:select_address] == "a"
