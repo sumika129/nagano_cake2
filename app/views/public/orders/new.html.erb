@@ -1,23 +1,13 @@
 <h3>注文情報入力</h3>
-<table>
   <%= form_with model: [:public,@order], url: public_orders_comfirm_path do |f| %>
-  <tr>
-    <th>支払方法</th>
-    <td>
-      <%= f.radio_button :payment_method, Order.payment_methods.key(0) %>
-      <%= f.label :payment_method_credit_card, Order.payment_methods_i18n[:credit_card] %>
-
-      <%= f.radio_button :payment_method, Order.payment_methods.key(1) %>
-      <%= f.label :payment_method_transfer, Order.payment_methods_i18n[:transfer]%>
-    </td>
-  </tr>
-  <tr>
-    <th>お届け先</th>
-    <td>
-      <%= f.radio_button :select_address, "a" %>
-      <%= f.label :select_address, "ご自身の住所" %>
-      <%= current_customer.address_display %>
-    </td>
-  </tr>
+  <h4>支払方法</h4>
+    <%= f.radio_button :payment_method, Order.payment_methods.key(0) %>
+    <%= f.label :payment_method_credit_card, Order.payment_methods_i18n[:credit_card] %>
+    <br>
+    <%= f.radio_button :payment_method, Order.payment_methods.key(1) %>
+    <%= f.label :payment_method_transfer, Order.payment_methods_i18n[:transfer]%>
+  <h4>お届け先</h4>
+    <%= f.radio_button :select_address, "a" %>
+    <%= f.label :select_address, "ご自身の住所" %><br>
+    <%= current_customer.address_display %>
   <% end %>
-</table>
