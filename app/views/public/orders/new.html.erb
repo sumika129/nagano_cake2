@@ -20,15 +20,18 @@
     <table>
       <tr>
         <th>郵便番号（ハイフンなし）</th>
-        <td></td>
+        <td><%= f.text_field :postal_code %></td>
       </tr>
       <tr>
         <th>住所</th>
-        <td></td>
+        <td><%= f.text_field :address %></td>
       </tr>
       <tr>
         <th>宛名</th>
-        <td></td>
+        <td><%= f.text_field :name %></td>
+      </tr>
+      <tr>
+        <td><%= f.submit "確認画面へ進む" %></td>
       </tr>
     </table>
   <% end %>
