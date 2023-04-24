@@ -14,4 +14,21 @@
     <%= f.radio_button :select_address, "b" %>
     <%= f.label :select_address, "登録済住所から選択" %><br>
     <%= f.select :address_id, options_from_collection_for_select(@address, :id, :address_display) %>
+    <br>
+    <%= f.radio_button :select_address, "c" %>
+    <%= f.label :select_address, "新しいお届け先" %><br>
+    <table>
+      <tr>
+        <th>郵便番号（ハイフンなし）</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>住所</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>宛名</th>
+        <td></td>
+      </tr>
+    </table>
   <% end %>
