@@ -5,7 +5,7 @@ class Public::OrdersController < ApplicationController
   end
 
   def comfirm
-   @cart_items = CartItem.all
+    @cart_items = CartItem.all
     @total = 0
     @postage = 800
     @order = Order.new(order_params)
@@ -23,6 +23,14 @@ class Public::OrdersController < ApplicationController
       @order.address = params[:order][:address]
       @order.name = params[:order][:name]
     end
+  end
+
+  def complete
+  end
+
+  def create
+    @order = Order.new(order_params)
+    @order.save
   end
 
   def index
