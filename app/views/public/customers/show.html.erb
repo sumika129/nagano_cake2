@@ -43,6 +43,6 @@
 <table>
   <tr>
     <th>注文履歴</th>
-    <td><%#= link_to "一覧を見る",  %></td>
+    <td><%= link_to "一覧を見る", public_orders_path(current_customer) %></td>
   </tr>
 </table>
