@@ -1,43 +1,51 @@
-<h3>配送先登録／一覧</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
 
-<%= form_with model: [:public,@address] do |f| %>
-<table>
-  <tr>
-    <th>郵便番号（ハイフンなし）</th>
-    <td><%= f.text_field :postal_code %></td>
-  </tr>
-  <tr>
-    <th>住所</th>
-    <td><%= f.text_field :address %></td>
-  </tr>
-  <tr>
-    <th>宛名</th>
-    <td><%= f.text_field :name %></td>
-    <td><%= f.submit '新規登録' %></td>
-  </tr>
-</table>
-<% end %>
+    <h3>配送先登録／一覧</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>郵便番号</th>
-      <th>住所</th>
-      <th>宛名</th>
-      <th></th>
-    </tr>
-  </thead>
-  <% @addresses.each do |address| %>
-  <tbody>
-    <tr>
-      <td><%= address.postal_code %></td>
-      <td><%= address.address %></td>
-      <td><%= address.name %></td>
-      <td>
-        <%= link_to "編集する", edit_public_address_path(address) %>
-        <%= link_to "削除する", public_address_path(address), method: :delete, "data-confirm" => "本当に消しますか?" %>
-      </td>
-    </tr>
-  </tbody>
-  <% end %>
-</table>
+    <%= form_with model: [:public,@address] do |f| %>
+    <table>
+      <tr>
+        <th>郵便番号（ハイフンなし）</th>
+        <td><%= f.text_field :postal_code %></td>
+      </tr>
+      <tr>
+        <th>住所</th>
+        <td><%= f.text_field :address %></td>
+      </tr>
+      <tr>
+        <th>宛名</th>
+        <td><%= f.text_field :name %></td>
+        <td><%= f.submit '新規登録' %></td>
+      </tr>
+    </table>
+    <% end %>
+
+    <table>
+      <thead>
+        <tr>
+          <th>郵便番号</th>
+          <th>住所</th>
+          <th>宛名</th>
+          <th></th>
+        </tr>
+      </thead>
+      <% @addresses.each do |address| %>
+      <tbody>
+        <tr>
+          <td><%= address.postal_code %></td>
+          <td><%= address.address %></td>
+          <td><%= address.name %></td>
+          <td>
+            <%= link_to "編集する", edit_public_address_path(address) %>
+            <%= link_to "削除する", public_address_path(address), method: :delete, "data-confirm" => "本当に消しますか?" %>
+          </td>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+
+    </div>
+  </div>
+</div>
