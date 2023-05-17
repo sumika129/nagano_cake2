@@ -1,25 +1,33 @@
-<h2>ログイン</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-<table>
-  <tr>
-    <div class="field">
-      <th><%= f.label :メールアドレス %></th>
-      <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
-    </div>
-  </tr>
-  <tr>
-    <div class="field">
-      <th><%= f.label :パスワード %></th>
-      <td><%= f.password_field :password, autocomplete: "current-password" %></td>
-    </div>
-  </tr>
-  <tr>
-    <div class="actions">
-      <td><%= f.submit "ログイン" %></td>
-    </div>
-  </tr>
-</table>
-<% end %>
+    <h2>ログイン</h2>
 
-<%= render "public/shared/links" %>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <table>
+      <tr>
+        <div class="field">
+          <th><%= f.label :メールアドレス %></th>
+          <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+        </div>
+      </tr>
+      <tr>
+        <div class="field">
+          <th><%= f.label :パスワード %></th>
+          <td><%= f.password_field :password, autocomplete: "current-password" %></td>
+        </div>
+      </tr>
+      <tr>
+        <div class="actions">
+          <td><%= f.submit "ログイン" %></td>
+        </div>
+      </tr>
+    </table>
+    <% end %>
+
+    <%= render "public/shared/links" %>
+
+    </div>
+  </div>
+</div>
