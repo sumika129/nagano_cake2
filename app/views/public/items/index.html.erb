@@ -1,15 +1,23 @@
-<h3>商品一覧</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
 
-<table>
-  <% @items.each do |item| %>
-  <tr>
-    <td><%= image_tag item.get_image(100,100) %></td>
-  </tr>
-  <tr>
-    <td><%= link_to public_item_path(item) do %><%= item.name %><% end %></td>
-  </tr>
-  <tr>
-    <td>¥<%= item.price %></td>
-  </tr>
-  <% end %>
-</table>
+    <h3>商品一覧</h3>
+
+    <table>
+      <% @items.each do |item| %>
+      <tr>
+        <td><%= image_tag item.get_image(100,100) %></td>
+      </tr>
+      <tr>
+        <td><%= link_to public_item_path(item) do %><%= item.name %><% end %></td>
+      </tr>
+      <tr>
+        <td>¥<%= item.price %></td>
+      </tr>
+      <% end %>
+    </table>
+
+    </div>
+  </div>
+</div>
