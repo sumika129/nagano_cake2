@@ -41,8 +41,8 @@
         <td>有効</td>
         <% end %>
       </tr>
-      <%= link_to "編集する", edit_admin_customer_path(@customer.id) %>
-      <%= link_to "注文履歴一覧を見る", admin_root_path %>
+      <%= link_to "編集する", edit_admin_customer_path(@customer.id), class:"btn btn-sm btn-success" %>
+      <%= link_to "注文履歴一覧を見る", admin_root_path, class:"btn btn-sm btn-primary" %>
     </table>
 
     </div>
