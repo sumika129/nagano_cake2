@@ -17,7 +17,7 @@
       <tr>
         <th>宛名</th>
         <td><%= f.text_field :name %></td>
-        <td><%= f.submit '新規登録' %></td>
+        <td><%= f.submit '新規登録', class:"btn btn-sm btn-success" %></td>
       </tr>
     </table>
     <% end %>
@@ -38,8 +38,8 @@
           <td><%= address.address %></td>
           <td><%= address.name %></td>
           <td>
-            <%= link_to "編集する", edit_public_address_path(address) %>
-            <%= link_to "削除する", public_address_path(address), method: :delete, "data-confirm" => "本当に消しますか?" %>
+            <%= link_to "編集する", edit_public_address_path(address), class:"btn btn-sm btn-success" %>
+            <%= link_to "削除する", public_address_path(address), method: :delete, "data-confirm" => "本当に消しますか?", class:"btn btn-sm btn-danger" %>
           </td>
         </tr>
       </tbody>
