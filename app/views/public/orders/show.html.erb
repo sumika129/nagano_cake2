@@ -5,7 +5,7 @@
     <h3>注文履歴詳細</h3>
 
     <h4>注文情報</h4>
-    <table>
+    <table border="1" style="border-collapse: collapse" >
       <tr>
         <th>注文日</th>
         <td><%= @order.created_at.strftime('%Y/%m/%d') %></td>
@@ -25,7 +25,7 @@
     </table>
 
     <h4>請求情報</h4>
-    <table>
+    <table border="1" style="border-collapse: collapse">
       <tr>
         <th>商品合計</th>
         <td><%= @order.billing_amount - @order.postage %></td>
@@ -41,7 +41,7 @@
     </table>
 
     <h4>注文内容</h4>
-    <table>
+    <table border="1" style="border-collapse: collapse" >
       <thead>
         <tr>
           <th>商品</th>
