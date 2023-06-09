@@ -4,14 +4,14 @@
 
     <h3>マイページ</h3>
 
-    <table border="1" style="border-collapse: collapse">
+    <table>
       <tr>
         <th>登録情報</th>
         <td><%= link_to "編集する", edit_public_customer_path(@customer), class:"btn btn-sm btn-success" %></td>
       </tr>
     </table>
 
-    <table>
+    <table border="1" style="border-collapse: collapse" >
       <tr>
         <th>氏名</th>
         <td><%= @customer.last_name %> <%= @customer.first_name %></td>
