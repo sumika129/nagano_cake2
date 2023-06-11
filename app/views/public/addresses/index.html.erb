@@ -5,7 +5,7 @@
     <h3>配送先登録／一覧</h3>
 
     <%= form_with model: [:public,@address] do |f| %>
-    <table border="1" style="border-collapse: collapse" >
+    <table>
       <tr>
         <th>郵便番号（ハイフンなし）</th>
         <td><%= f.text_field :postal_code %></td>
@@ -21,8 +21,9 @@
       </tr>
     </table>
     <% end %>
+    <br>
 
-    <table>
+    <table border="1" style="border-collapse: collapse" >
       <thead>
         <tr>
           <th>郵便番号</th>
