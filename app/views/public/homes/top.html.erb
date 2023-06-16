@@ -22,7 +22,20 @@
     <br>
 
     <h3>新着商品</h3>
-
+    <% @item.each do |item| %>
+      <table>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td><%= item.name %></td>
+        </tr>
+        <tr>
+          <td>¥<%= item.price %></td>
+        </tr>
+      </table>
+    <% end %>
+    <td><%= link_to "全ての商品を見る", public_items_path %></td>
     </div>
   </div>
 </div>
