@@ -25,7 +25,7 @@
     <% @item.each do |item| %>
       <table>
         <tr>
-          <td></td>
+          <td><%= link_to public_item_path(item) do %><%= image_tag item.get_image(70,70) %><% end %></td>
         </tr>
         <tr>
           <td><%= item.name %></td>
